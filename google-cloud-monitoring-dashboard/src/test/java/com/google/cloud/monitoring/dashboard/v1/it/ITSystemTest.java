@@ -18,8 +18,9 @@ package com.google.cloud.monitoring.dashboard.v1.it;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
-import com.google.cloud.ServiceOptions;
 import com.google.cloud.monitoring.dashboard.v1.DashboardsServiceClient;
+import com.google.cloud.resourcemanager.ResourceManager;
+import com.google.cloud.resourcemanager.ResourceManagerOptions;
 import com.google.monitoring.dashboard.v1.CreateDashboardRequest;
 import com.google.monitoring.dashboard.v1.Dashboard;
 import com.google.monitoring.dashboard.v1.DeleteDashboardRequest;
@@ -35,12 +36,14 @@ import org.junit.Test;
 public class ITSystemTest {
 
   private static DashboardsServiceClient client;
-  private static String dashboardName;
   private static String etag;
 
-  private static final String PROJECT_ID = ServiceOptions.getDefaultProjectId();
-  private static final String PARENT = "projects/" + PROJECT_ID;
+  private static final ResourceManager RESOURCE_MANAGER =
+      ResourceManagerOptions.getDefaultInstance().getService();
+  private static final String PROJECT_ID = RESOURCE_MANAGER.getOptions().getProjectId();
+  private static final Long PROJECT_NUMBER = RESOURCE_MANAGER.get(PROJECT_ID).getProjectNumber();
   private static final String ID = UUID.randomUUID().toString();
+  private static final String PARENT = "projects/" + PROJECT_NUMBER;
   private static final String DASHBOARD_NAME = String.format("%s/dashboards/%s", PARENT, ID);
   private static final String DASHBOARD_DISPLAY_NAME = "test-dashboard-" + ID;
   private static final GridLayout GRID_LAYOUT = GridLayout.newBuilder().setColumns(5).build();
@@ -48,35 +51,31 @@ public class ITSystemTest {
   @BeforeClass
   public static void setUp() throws Exception {
     client = DashboardsServiceClient.create();
-
     Dashboard dashboard =
         Dashboard.newBuilder()
             .setName(DASHBOARD_NAME)
             .setGridLayout(GRID_LAYOUT)
             .setDisplayName(DASHBOARD_DISPLAY_NAME)
             .build();
-    System.out.println(dashboard.getName());
     CreateDashboardRequest request =
         CreateDashboardRequest.newBuilder().setParent(PARENT).setDashboard(dashboard).build();
     Dashboard response = client.createDashboard(request);
-    dashboardName = response.getName();
-    System.out.println(dashboardName);
     etag = response.getEtag();
   }
 
   @AfterClass
   public static void tearDown() {
     DeleteDashboardRequest request =
-        DeleteDashboardRequest.newBuilder().setName(dashboardName).build();
+        DeleteDashboardRequest.newBuilder().setName(DASHBOARD_NAME).build();
     client.deleteDashboard(request);
     client.close();
   }
 
   @Test
   public void getDashboardTest() {
-    GetDashboardRequest request = GetDashboardRequest.newBuilder().setName(dashboardName).build();
+    GetDashboardRequest request = GetDashboardRequest.newBuilder().setName(DASHBOARD_NAME).build();
     Dashboard dashboard = client.getDashboard(request);
-    assertEquals(dashboardName, dashboard.getName());
+    assertEquals(DASHBOARD_NAME, dashboard.getName());
     assertEquals(DASHBOARD_DISPLAY_NAME, dashboard.getDisplayName());
     assertEquals(GRID_LAYOUT, dashboard.getGridLayout());
   }
@@ -85,7 +84,7 @@ public class ITSystemTest {
   public void updateDashboardTest() {
     Dashboard actualDashboard =
         Dashboard.newBuilder()
-            .setName(dashboardName)
+            .setName(DASHBOARD_NAME)
             .setGridLayout(GRID_LAYOUT)
             .setDisplayName(DASHBOARD_DISPLAY_NAME)
             .setEtag(etag)
@@ -93,7 +92,7 @@ public class ITSystemTest {
     UpdateDashboardRequest request =
         UpdateDashboardRequest.newBuilder().setDashboard(actualDashboard).build();
     Dashboard dashboard = client.updateDashboard(request);
-    assertEquals(dashboardName, dashboard.getName());
+    assertEquals(DASHBOARD_NAME, dashboard.getName());
     assertEquals(etag, dashboard.getEtag());
     assertEquals(DASHBOARD_DISPLAY_NAME, dashboard.getDisplayName());
     assertEquals(GRID_LAYOUT, dashboard.getGridLayout());
@@ -103,8 +102,8 @@ public class ITSystemTest {
   public void listDashboardsTest() {
     ListDashboardsRequest request = ListDashboardsRequest.newBuilder().setParent(PARENT).build();
     for (Dashboard actualDashboard : client.listDashboards(request).iterateAll()) {
-      if (dashboardName.equals(actualDashboard.getDisplayName())) {
-        assertEquals(dashboardName, actualDashboard.getName());
+      if (DASHBOARD_NAME.equals(actualDashboard.getDisplayName())) {
+        assertEquals(DASHBOARD_NAME, actualDashboard.getName());
         assertEquals(DASHBOARD_DISPLAY_NAME, actualDashboard.getDisplayName());
         assertEquals(GRID_LAYOUT, actualDashboard.getGridLayout());
       }
