@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-monitoring-dashboards.git",
-        "sha": "4c03ded0a0332de61103d960315412ea5d983872"
+        "sha": "130895a19b5a77a0541d31003572dcc3367d60cb"
       }
     },
     {
