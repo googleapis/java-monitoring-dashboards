@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-monitoring-dashboards.git",
-        "sha": "130895a19b5a77a0541d31003572dcc3367d60cb"
+        "sha": "6b8041fc4e8e8d349b417730c7da8767091f7a5d"
       }
     },
     {
@@ -19,7 +19,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "80003a3de2d8a75f5b47cb2e77e018f7f0f776cc"
+        "sha": "916c10e8581804df2b48a0f0457d848f3faa582e"
       }
     }
   ],
@@ -92,7 +92,6 @@
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE",
-    "README.md",
     "codecov.yaml",
     "google-cloud-monitoring-dashboard/src/main/java/com/google/cloud/monitoring/dashboard/v1/DashboardsServiceClient.java",
     "google-cloud-monitoring-dashboard/src/main/java/com/google/cloud/monitoring/dashboard/v1/DashboardsServiceSettings.java",
