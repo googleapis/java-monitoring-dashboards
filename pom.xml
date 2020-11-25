@@ -97,6 +97,12 @@
         <version>4.13.1</version>
         <scope>test</scope>
       </dependency>
+      <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-resourcemanager</artifactId>
+        <version>0.118.4-alpha</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
