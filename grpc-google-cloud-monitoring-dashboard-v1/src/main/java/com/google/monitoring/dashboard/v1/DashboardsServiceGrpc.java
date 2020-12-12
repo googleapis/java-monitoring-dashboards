@@ -22,14 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Manages Stackdriver dashboards. A dashboard is an arrangement of data display
- * widgets in a specific layout.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/monitoring/dashboard/v1/dashboards_service.proto")
@@ -309,26 +302,10 @@ public final class DashboardsServiceGrpc {
     return DashboardsServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages Stackdriver dashboards. A dashboard is an arrangement of data display
-   * widgets in a specific layout.
-   * </pre>
-   */
+  /** */
   public abstract static class DashboardsServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new custom dashboard.
-     * This method requires the `monitoring.dashboards.create` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void createDashboard(
         com.google.monitoring.dashboard.v1.CreateDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.Dashboard>
@@ -336,16 +313,7 @@ public final class DashboardsServiceGrpc {
       asyncUnimplementedUnaryCall(getCreateDashboardMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing dashboards.
-     * This method requires the `monitoring.dashboards.list` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void listDashboards(
         com.google.monitoring.dashboard.v1.ListDashboardsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.ListDashboardsResponse>
@@ -353,16 +321,7 @@ public final class DashboardsServiceGrpc {
       asyncUnimplementedUnaryCall(getListDashboardsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Fetches a specific dashboard.
-     * This method requires the `monitoring.dashboards.get` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void getDashboard(
         com.google.monitoring.dashboard.v1.GetDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.Dashboard>
@@ -370,32 +329,14 @@ public final class DashboardsServiceGrpc {
       asyncUnimplementedUnaryCall(getGetDashboardMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing custom dashboard.
-     * This method requires the `monitoring.dashboards.delete` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void deleteDashboard(
         com.google.monitoring.dashboard.v1.DeleteDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteDashboardMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replaces an existing custom dashboard with a new definition.
-     * This method requires the `monitoring.dashboards.update` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void updateDashboard(
         com.google.monitoring.dashboard.v1.UpdateDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.Dashboard>
@@ -443,14 +384,7 @@ public final class DashboardsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages Stackdriver dashboards. A dashboard is an arrangement of data display
-   * widgets in a specific layout.
-   * </pre>
-   */
+  /** */
   public static final class DashboardsServiceStub
       extends io.grpc.stub.AbstractAsyncStub<DashboardsServiceStub> {
     private DashboardsServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -463,16 +397,7 @@ public final class DashboardsServiceGrpc {
       return new DashboardsServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new custom dashboard.
-     * This method requires the `monitoring.dashboards.create` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void createDashboard(
         com.google.monitoring.dashboard.v1.CreateDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.Dashboard>
@@ -483,16 +408,7 @@ public final class DashboardsServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing dashboards.
-     * This method requires the `monitoring.dashboards.list` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void listDashboards(
         com.google.monitoring.dashboard.v1.ListDashboardsRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.ListDashboardsResponse>
@@ -503,16 +419,7 @@ public final class DashboardsServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Fetches a specific dashboard.
-     * This method requires the `monitoring.dashboards.get` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void getDashboard(
         com.google.monitoring.dashboard.v1.GetDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.Dashboard>
@@ -523,16 +430,7 @@ public final class DashboardsServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing custom dashboard.
-     * This method requires the `monitoring.dashboards.delete` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void deleteDashboard(
         com.google.monitoring.dashboard.v1.DeleteDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -542,16 +440,7 @@ public final class DashboardsServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replaces an existing custom dashboard with a new definition.
-     * This method requires the `monitoring.dashboards.update` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public void updateDashboard(
         com.google.monitoring.dashboard.v1.UpdateDashboardRequest request,
         io.grpc.stub.StreamObserver<com.google.monitoring.dashboard.v1.Dashboard>
@@ -563,14 +452,7 @@ public final class DashboardsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages Stackdriver dashboards. A dashboard is an arrangement of data display
-   * widgets in a specific layout.
-   * </pre>
-   */
+  /** */
   public static final class DashboardsServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DashboardsServiceBlockingStub> {
     private DashboardsServiceBlockingStub(
@@ -584,90 +466,38 @@ public final class DashboardsServiceGrpc {
       return new DashboardsServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new custom dashboard.
-     * This method requires the `monitoring.dashboards.create` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.dashboard.v1.Dashboard createDashboard(
         com.google.monitoring.dashboard.v1.CreateDashboardRequest request) {
       return blockingUnaryCall(getChannel(), getCreateDashboardMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing dashboards.
-     * This method requires the `monitoring.dashboards.list` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.dashboard.v1.ListDashboardsResponse listDashboards(
         com.google.monitoring.dashboard.v1.ListDashboardsRequest request) {
       return blockingUnaryCall(getChannel(), getListDashboardsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Fetches a specific dashboard.
-     * This method requires the `monitoring.dashboards.get` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.dashboard.v1.Dashboard getDashboard(
         com.google.monitoring.dashboard.v1.GetDashboardRequest request) {
       return blockingUnaryCall(getChannel(), getGetDashboardMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing custom dashboard.
-     * This method requires the `monitoring.dashboards.delete` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty deleteDashboard(
         com.google.monitoring.dashboard.v1.DeleteDashboardRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteDashboardMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replaces an existing custom dashboard with a new definition.
-     * This method requires the `monitoring.dashboards.update` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.monitoring.dashboard.v1.Dashboard updateDashboard(
         com.google.monitoring.dashboard.v1.UpdateDashboardRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateDashboardMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Manages Stackdriver dashboards. A dashboard is an arrangement of data display
-   * widgets in a specific layout.
-   * </pre>
-   */
+  /** */
   public static final class DashboardsServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<DashboardsServiceFutureStub> {
     private DashboardsServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -680,16 +510,7 @@ public final class DashboardsServiceGrpc {
       return new DashboardsServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a new custom dashboard.
-     * This method requires the `monitoring.dashboards.create` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.dashboard.v1.Dashboard>
         createDashboard(com.google.monitoring.dashboard.v1.CreateDashboardRequest request) {
@@ -697,16 +518,7 @@ public final class DashboardsServiceGrpc {
           getChannel().newCall(getCreateDashboardMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the existing dashboards.
-     * This method requires the `monitoring.dashboards.list` permission
-     * on the specified project. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.dashboard.v1.ListDashboardsResponse>
         listDashboards(com.google.monitoring.dashboard.v1.ListDashboardsRequest request) {
@@ -714,16 +526,7 @@ public final class DashboardsServiceGrpc {
           getChannel().newCall(getListDashboardsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Fetches a specific dashboard.
-     * This method requires the `monitoring.dashboards.get` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.dashboard.v1.Dashboard>
         getDashboard(com.google.monitoring.dashboard.v1.GetDashboardRequest request) {
@@ -731,32 +534,14 @@ public final class DashboardsServiceGrpc {
           getChannel().newCall(getGetDashboardMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes an existing custom dashboard.
-     * This method requires the `monitoring.dashboards.delete` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         deleteDashboard(com.google.monitoring.dashboard.v1.DeleteDashboardRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteDashboardMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replaces an existing custom dashboard with a new definition.
-     * This method requires the `monitoring.dashboards.update` permission
-     * on the specified dashboard. For more information, see
-     * [Google Cloud IAM](https://cloud.google.com/iam).
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.monitoring.dashboard.v1.Dashboard>
         updateDashboard(com.google.monitoring.dashboard.v1.UpdateDashboardRequest request) {
