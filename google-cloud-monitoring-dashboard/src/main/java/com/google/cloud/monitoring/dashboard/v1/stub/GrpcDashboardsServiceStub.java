@@ -129,11 +129,21 @@ public class GrpcDashboardsServiceStub extends DashboardsServiceStub {
         DashboardsServiceStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcDashboardsServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcDashboardsServiceStub(
       DashboardsServiceStubSettings settings, ClientContext clientContext) throws IOException {
     this(settings, clientContext, new GrpcDashboardsServiceCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcDashboardsServiceStub, using the given settings. This is
+   * protected so that it is easy to make a subclass, but otherwise, the static factory methods
+   * should be preferred.
+   */
   protected GrpcDashboardsServiceStub(
       DashboardsServiceStubSettings settings,
       ClientContext clientContext,
