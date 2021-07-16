@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/googleapis/java-monitoring-dashboards/compare/v1.3.2...v1.4.0) (2021-07-16)
+
+
+### Features
+
+* added alert chart widget ([5a95815](https://www.github.com/googleapis/java-monitoring-dashboards/commit/5a958151894372851699d8a5e614c6a912b1da59))
+* added validation only mode when writing dashboards ([#411](https://www.github.com/googleapis/java-monitoring-dashboards/issues/411)) ([5a95815](https://www.github.com/googleapis/java-monitoring-dashboards/commit/5a958151894372851699d8a5e614c6a912b1da59))
+
 ### [1.3.2](https://www.github.com/googleapis/java-monitoring-dashboards/compare/v1.3.1...v1.3.2) (2021-07-01)
 
 
