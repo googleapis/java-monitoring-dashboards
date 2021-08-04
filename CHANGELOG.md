@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://www.github.com/googleapis/java-monitoring-dashboards/compare/v1.3.2...v1.4.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#429](https://www.github.com/googleapis/java-monitoring-dashboards/issues/429)) ([6da198a](https://www.github.com/googleapis/java-monitoring-dashboards/commit/6da198a9ba7bce9f1f34a0b2c4edb45ea914aad6))
+
 ### [1.3.2](https://www.github.com/googleapis/java-monitoring-dashboards/compare/v1.3.1...v1.3.2) (2021-07-01)
 
 
