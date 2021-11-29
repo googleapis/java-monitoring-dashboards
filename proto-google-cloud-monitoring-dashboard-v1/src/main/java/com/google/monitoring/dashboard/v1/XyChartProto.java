@@ -54,8 +54,7 @@ public final class XyChartProto {
     java.lang.String[] descriptorData = {
       "\n"
           + ",google/monitoring/dashboard/v1/xychart"
-          + ".proto\022\036google.monitoring.dashboard.v1\032\037"
-          + "google/api/field_behavior.proto\032,google/monitoring/dashboard/v1/metrics.proto\032\036google/protobuf/duration.proto\"\375\006\n"
+          + ".proto\022\036google.monitoring.dashboard.v1\032\037google/api/field_behavior.proto\032,google/monitoring/dashboard/v1/metrics.proto\032\036google/protobuf/duration.proto\"\375\006\n"
           + "\007XyChart\022G\n"
           + "\tdata_sets\030\001"
           + " \003(\0132/.google.monitoring.dashboard.v1.XyChart.DataSetB\003\340A\002\0225\n"
