@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.6](https://github.com/googleapis/java-monitoring-dashboards/compare/v2.5.5...v2.5.6) (2022-10-05)
+
+
+### Bug Fixes
+
+* update protobuf to v3.21.7 ([fe64f03](https://github.com/googleapis/java-monitoring-dashboards/commit/fe64f0385b292cb96e69c3f1f0f32e79971a704d))
+
 ## [2.5.5](https://github.com/googleapis/java-monitoring-dashboards/compare/v2.5.4...v2.5.5) (2022-10-03)
 
 
